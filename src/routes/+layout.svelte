@@ -123,6 +123,9 @@
 				<li><a href="/projects">Projects</a></li>
 			</ul>
 		</div>
+		<!-- logo or site title -->
+		<!-- NOTE: remove the 'btn' and 'btn-ghost' classes if you don't want a button -->
+		<!-- This is especially important if you're having some layout issues.  -->
 		<a href="/" class="btn btn-ghost text-xl">EZ SITE</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
@@ -229,13 +232,13 @@
 	</div>
 
 	<div class="navbar-end">
-		<div class="mx-5 flex self-center">
+		<div class="mx-1 md:mx-5 flex self-center">
 			<label class="swap swap-rotate">
 				<!-- this hidden checkbox controls the state -->
 				<input type="checkbox" class="theme-controller" value="synthwave" />
 				<!-- sun icon -->
 				<svg
-					class="swap-off fill-current w-10 h-10"
+					class="swap-off fill-current h-5 md:h-10"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					><path
@@ -244,7 +247,7 @@
 				>
 				<!-- moon icon -->
 				<svg
-					class="swap-on fill-current w-10 h-10"
+					class="swap-on fill-current h-5 md:h-10"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					><path

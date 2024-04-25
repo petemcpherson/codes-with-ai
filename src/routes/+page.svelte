@@ -40,7 +40,8 @@
 			<button class="btn btn-primary">Get Started</button>
 			<!-- social icons -->
 			<div class="flex gap-4 mt-8">
-				<a href="/">
+				<!-- twitter -->
+				<a href="https://twitter.com/doyouevenblog/" target="_blank" rel="noreferrer noopener">
 					<svg
 						viewBox="0 0 24 24"
 						aria-hidden="true"
@@ -50,7 +51,8 @@
 						></path></svg
 					>
 				</a>
-				<a href="/">
+				<!-- instagram -->
+				<a href="https://www.instagram.com/bloggerpete" target="_blank" rel="noreferrer noopener">
 					<svg
 						viewBox="0 0 24 24"
 						aria-hidden="true"
@@ -62,7 +64,8 @@
 						></path></svg
 					>
 				</a>
-				<a href="/">
+				<!-- github -->
+				<a href="https://github.com/petemcpherson" target="_blank" rel="noreferrer noopener">
 					<svg
 						viewBox="0 0 24 24"
 						aria-hidden="true"
@@ -74,7 +77,12 @@
 						></path></svg
 					>
 				</a>
-				<a href="/">
+				<!-- linkedIn -->
+				<a
+					href="https://www.linkedin.com/in/petemcpherson/"
+					target="_blank"
+					rel="noreferrer noopener"
+				>
 					<svg
 						viewBox="0 0 24 24"
 						aria-hidden="true"
