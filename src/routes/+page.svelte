@@ -33,11 +33,13 @@
 	<!-- hero -->
 	<div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-4 lg:py-8">
 		<div class="lg:self-center w-full">
-			<h1 class="text-3xl lg:text-7xl font-black">
-				Welcome to Pete's blank starter website template!
-			</h1>
-			<p class="py-6">Duplicate, customize, then deploy. Host this website for free forever.</p>
-			<button class="btn btn-primary">Get Started</button>
+			<h1 class="text-3xl lg:text-7xl font-black">Welcome to Pete's free website template!</h1>
+			<p class="py-6">
+				Duplicate, customize, then deploy. Host this website for <span
+					class="font-black text-success">free</span
+				> forever.
+			</p>
+			<a href="/get" class="btn btn-primary">Get Template</a>
 			<!-- social icons -->
 			<div class="flex gap-4 mt-8">
 				<!-- twitter -->
@@ -112,9 +114,66 @@
 		</div>
 	</div>
 
+	<!-- copy bullets -->
+	<div class="bg-gradient-to-br from-neutral to-neutral-700 py-8 lg:py-24 text-neutral-content">
+		<div class="md:w-1/2 mx-2 md:mx-auto leading-loose">
+			<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">
+				HYPER-IMPORTANT <span class="text-warning">WARNING</span>.
+			</h2>
+			<h3 class="mb-3 text-xl text-center">
+				Hey there! 95% of this website is just boilerplate nonsense, except for this section. Please
+				pay attention!
+			</h3>
+			<p class="mb-3 font-black">This template DOES NOT include...</p>
+			<ol class="mb-3">
+				<li>
+					❌ A CMS like WordPress (technically you can publish pages, but it's not a CMS. It DOES
+					NOT replace your WordPress blog.)
+				</li>
+				<li>❌ A database (though you can totally add one on yourself)</li>
+				<li>❌ A payment system (Stripe, etc)</li>
+				<li>❌ Customer Support!</li>
+			</ol>
+			<p class="mb-3 font-black">...but this template...</p>
+			<ol class="mb-3">
+				<li>✅️ is 100% free</li>
+				<li>✅️ is 100% Customizable</li>
+				<li>✅️ has lots of color themes</li>
+				<li>✅️ has Google Fonts support</li>
+				<li>✅️ is SEO-friendly everything</li>
+				<li>✅️ has Google Analytics support</li>
+				<li>✅️ could have a custom domain name</li>
+				<li>✅️ has Zapier support (collect emails??)</li>
+				<li>✅️ has a Mini-course with detailed setup + customization guide</li>
+				<li>✅️ can be HOSTED FOR FREE (Cloudflare Pages, Vercel, or Netlify)</li>
+			</ol>
+			<p class="mb-3">
+				Portfolio for your freelance stuff? Small business website? Simple landing page w/ an email
+				signup? All great use cases!
+			</p>
+			<p class="mb-3 font-black">Tech stack:</p>
+			<ol class="mb-3">
+				<li>🪚 Svelte</li>
+				<li>🪚 SvelteKit</li>
+				<li>🪚 Tailwind CSS</li>
+				<li>🪚 DaisyUI</li>
+			</ol>
+			<p class="mb-3 font-black">"Do I need to know code???"</p>
+			<p class="mb-3">
+				<span class="text-success font-bold">Technically, no.</span> You can literally duplicate this
+				template, change some of the content, and you're good to go. But you will be dealing with HTML!
+				(and if you want to go deeper, Javascript + Svelte).
+			</p>
+			<p class="mb-3">
+				HOWEVER. You will be dealing with code! This could be a fun side project if you've ever
+				wanted to dabble in code! You'll learn a TON in the free course.
+			</p>
+		</div>
+	</div>
+
 	<!-- various cards -->
 	<div class="py-8 lg:py-24">
-		<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">Stuff I'm building right meow</h2>
+		<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">Show off some projects here?</h2>
 		<div class="w-5/6 mx-auto flex flex-wrap gap-4">
 			<div class="card w-96 bg-base-100 shadow-xl flex-auto">
 				<figure>

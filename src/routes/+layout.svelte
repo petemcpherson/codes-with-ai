@@ -256,7 +256,7 @@
 				>
 			</label>
 		</div>
-		<a href="/" class="btn btn-primary">I'm a button</a>
+		<a href="/get" class="btn btn-primary">Get template</a>
 	</div>
 </div>
 <slot />

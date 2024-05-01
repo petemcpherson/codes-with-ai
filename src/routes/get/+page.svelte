@@ -1,6 +1,5 @@
 <script>
 	/** @type {import('./$types').PageData} */
-
 	import Head from '$lib/components/Head.svelte';
 
 	let email = '';
@@ -19,13 +18,11 @@
 		});
 
 		if (res.ok) {
-			// goto('/thank-you-page-you-need-to-create');
 			alert(
-				'You submitted the email: ' +
-					email +
-					'. This could totally go to a Zapier webhook and to your ESP--or you could just drop an embedded form here.'
+				"NICE! Check your email! When you close this, you'll be redirected to the course that'll teach you everything :)"
 			);
 			email = '';
+			window.location = 'https://ez-site-course.vercel.app/';
 		} else {
 			console.error('Failed to submit email');
 			alert('Failed to submit email');
