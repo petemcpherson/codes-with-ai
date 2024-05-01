@@ -126,7 +126,7 @@
 		<!-- logo or site title -->
 		<!-- NOTE: remove the 'btn' and 'btn-ghost' classes if you don't want a button -->
 		<!-- This is especially important if you're having some layout issues.  -->
-		<a href="/" class="btn btn-ghost text-xl">EZ SITE</a>
+		<a href="/" class="mx-1 md:mx-5 btn btn-ghost text-xl">EZ SITE</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
