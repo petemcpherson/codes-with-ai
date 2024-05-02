@@ -1,6 +1,6 @@
 <script>
 	/** @type {import('./$types').PageData} */
-	import pete_drinks_espresso from '$lib/assets/images/pete_drinks_espresso.jpeg';
+	import pete_drinks_espresso from '$lib/assets/images/pete_drinks_espresso.jpeg'; //asdf remove
 	import Head from '$lib/components/Head.svelte';
 
 	let email = '';
@@ -28,7 +28,7 @@
 		Seriously though.
 	</h2>
 	<!-- video -->
-	<div>
+	<div class="md:w-3/4 lg:w-1/2 mx-auto">
 		<div style="position: relative; padding-bottom: 64.98194945848375%; height: 0;">
 			<iframe
 				src="https://www.loom.com/embed/2cf5529de331410ba893787821b2a1e7?sid=9e527282-4201-40ed-bc31-1ba89c0148b5"
@@ -42,7 +42,7 @@
 		</div>
 	</div>
 	<div class="flex justify-center">
-		<a href="/" class="my-4 md:my-8 btn btn-lg btn-secondary">BUY NOW</a>
+		<a href="#pricing" class="my-4 md:my-8 btn btn-lg btn-secondary">BUY NOW</a>
 	</div>
 </div>
 
@@ -93,6 +93,7 @@
 	<div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-8 lg:py-8">
 		<div>
 			<img src={pete_drinks_espresso} alt="pete" class="w-full rounded-lg shadow-2xl" />
+			<!-- asdf remove image above -->
 		</div>
 		<div class="lg:self-center w-full">
 			<h1 class="text-3xl lg:text-7xl font-black mb-3">Hi, I'm a bio section 👋️</h1>

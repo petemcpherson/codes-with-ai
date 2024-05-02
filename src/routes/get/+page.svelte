@@ -5,7 +5,7 @@
 	let email = '';
 
 	const handleSubmit = async () => {
-		const zapierUrl = 'https://hooks.zapier.com/hooks/catch/1152094/37errja/';
+		const zapierUrl = 'https://hooks.zapier.com/hooks/catch/1152094/37errja/'; // asdf be sure to change!!
 
 		const res = await fetch('/api/zapier', {
 			method: 'POST',
@@ -22,7 +22,7 @@
 				"NICE! Check your email! When you close this, you'll be redirected to the course that'll teach you everything :)"
 			);
 			email = '';
-			window.location = 'https://ez-site-course.vercel.app/';
+			window.location = 'https://ez-site-course.vercel.app/'; // asdf be sure to change!!
 		} else {
 			console.error('Failed to submit email');
 			alert('Failed to submit email');

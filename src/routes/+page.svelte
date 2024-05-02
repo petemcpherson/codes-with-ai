@@ -1,6 +1,6 @@
 <script>
-	import pete_is_cool from '$lib/assets/images/pete_is_cool.jpeg';
-	import pete_drinks_espresso from '$lib/assets/images/pete_drinks_espresso.jpeg';
+	import pete_is_cool from '$lib/assets/images/pete_is_cool.jpeg'; //asdf remove
+	import pete_drinks_espresso from '$lib/assets/images/pete_drinks_espresso.jpeg'; //asdf remove
 	import Head from '$lib/components/Head.svelte';
 
 	const featuredOnImages = [
@@ -98,6 +98,7 @@
 		</div>
 		<div>
 			<img src={pete_is_cool} alt="pete" class="w-full rounded-lg shadow-2xl" />
+			<!-- asdf remove image above -->
 		</div>
 	</div>
 
@@ -251,6 +252,7 @@
 		<div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-8 lg:py-8">
 			<div>
 				<img src={pete_drinks_espresso} alt="pete" class="w-full rounded-lg shadow-2xl" />
+				<!-- asdf remove image above -->
 			</div>
 			<div class="lg:self-center w-full">
 				<h1 class="text-3xl lg:text-7xl font-black mb-3">Hi, I'm a bio section 👋️</h1>
