@@ -3,7 +3,7 @@
 	// you can optionally import a share image here for the entire site?
 	// import socialImage from '$lib/assets/images/socialImage.png';
 
-	export let title = 'EZ-SITE';
+	export let title = 'codes with ai';
 	export let description = config.description;
 	export let author = config.author;
 	export let url = config.siteUrl;

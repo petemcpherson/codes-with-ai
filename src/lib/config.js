@@ -1,12 +1,12 @@
 export const analytics = {
-	id: 'G-asdf'
+	id: 'G-QYVEBMFP9T'
 }
 
 export const config = {
-	title: 'EZ-SITE',
-	description: 'The EZ-SITE template from Pete McPherson',
+	title: 'codes with ai',
+	description: 'Pete builds apps to make money with code and ai.',
 	author: 'Pete McPherson',
-	siteUrl: 'https://ez-site.pages.dev',
-	domain: 'ez-site.pages.dev',
+	siteUrl: 'https://codeswithai.com',
+	domain: 'codeswithai.com',
 }
 

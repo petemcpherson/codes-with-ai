@@ -23,210 +23,20 @@
 				>
 			</div>
 			<ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-				<li>
-					<details>
-						<summary>Theme</summary>
-						<ul class="p-2">
-							<!-- <li><a href="/">Normal Link 1</a></li>
-							<li><a href="/">Normal Link 2</a></li> -->
-							<!-- theme controller -->
-
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Default"
-									value="default"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Retro"
-									value="retro"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Cyberpunk"
-									value="cyberpunk"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Valentine"
-									value="valentine"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Aqua"
-									value="aqua"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Cupcake"
-									value="cupcake"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Bumblebee"
-									value="bumblebee"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Black"
-									value="black"
-								/>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="theme-dropdown"
-									class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-									aria-label="Luxury"
-									value="luxury"
-								/>
-							</li>
-							<li>
-								<i>Plus loads more</i>
-							</li>
-						</ul>
-					</details>
-				</li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/salesy-mcsales-landing-page">LNDNG PGE</a></li>
+				<!-- <li><a href="/about">About</a></li>
+				<li><a href="/salesy-mcsales-landing-page">LNDNG PGE</a></li> -->
 				<li><a href="/projects">Projects</a></li>
 			</ul>
 		</div>
 		<!-- logo or site title -->
 		<!-- NOTE: remove the 'btn' and 'btn-ghost' classes if you don't want a button -->
 		<!-- This is especially important if you're having some layout issues.  -->
-		<a href="/" class="mx-1 md:mx-5 btn btn-ghost text-xl">EZ SITE</a>
+		<a href="/" class="mx-1 md:mx-5 btn btn-ghost text-xl">codes with ai</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
-			<li>
-				<details>
-					<summary>Theme</summary>
-					<ul class="p-2">
-						<!-- <li><a href="/">Normal Link 1</a></li>
-						<li><a href="/">Normal Link 2</a></li> -->
-						<!-- theme controller -->
-
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Default"
-								value="default"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Retro"
-								value="retro"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Cyberpunk"
-								value="cyberpunk"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Valentine"
-								value="valentine"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Aqua"
-								value="aqua"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Cupcake"
-								value="cupcake"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Bumblebee"
-								value="bumblebee"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Black"
-								value="black"
-							/>
-						</li>
-						<li>
-							<input
-								type="radio"
-								name="theme-dropdown"
-								class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-								aria-label="Luxury"
-								value="luxury"
-							/>
-						</li>
-						<li>
-							<i>Plus loads more</i>
-						</li>
-					</ul>
-				</details>
-			</li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/salesy-mcsales-landing-page">LNDNG PGE</a></li>
+			<!-- <li><a href="/about">About</a></li>
+			<li><a href="/salesy-mcsales-landing-page">LNDNG PGE</a></li> -->
 			<li><a href="/projects">Projects</a></li>
 		</ul>
 	</div>
@@ -235,7 +45,7 @@
 		<div class="mx-1 md:mx-5 flex self-center">
 			<label class="swap swap-rotate">
 				<!-- this hidden checkbox controls the state -->
-				<input type="checkbox" class="theme-controller" value="synthwave" />
+				<input type="checkbox" class="theme-controller" value="light" />
 				<!-- sun icon -->
 				<svg
 					class="swap-off fill-current h-5 md:h-10"
@@ -256,18 +66,17 @@
 				>
 			</label>
 		</div>
-		<a href="/get" class="btn btn-primary">Get template</a>
+		<!-- <a href="/get" class="btn btn-primary">Get template</a> -->
 	</div>
 </div>
 <slot />
 
 <!-- footer section -->
 
-<footer class="footer mt-10 p-10 bg-neutral text-neutral-content">
+<!-- <footer class="footer mt-10 p-10 bg-neutral text-neutral-content">
 	<div class=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 		<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-left">
 			<h2>EZ-SITE</h2>
-			<!-- <img src={asdf IMAGENAME} alt="asdf IMAGE NAME" class="h-11" /> -->
 
 			<p class="mt-3 text-sm text-neutral-content/80">This is a super short tagline.</p>
 			<p class="mt-3 text-sm text-neutral-content/60">Copyright © 2024 - All rights reserved</p>
@@ -310,7 +119,7 @@
 		</a>
 		<a class="link link-hover" href="/" target="_blank" rel="noferrer noopener">Yet another link</a>
 	</nav>
-</footer>
+</footer> -->
 
 <Analytics />
 

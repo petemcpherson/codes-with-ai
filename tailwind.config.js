@@ -37,7 +37,13 @@ export default {
       "winter",
       "dim",
       "nord",
-      "sunset",
+      {
+        sunset: {
+          ...require("daisyui/src/theming/themes")["sunset"],
+          primary: "#ccff00",
+          "base-100": "#111",
+        },
+      },
     ],
   },
 

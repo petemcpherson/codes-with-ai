@@ -27,11 +27,11 @@
 	];
 </script>
 
-<Head />
+<Head title="homepage" />
 
 <div>
 	<!-- hero -->
-	<div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-4 lg:py-8">
+	<!-- <div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-4 lg:py-8">
 		<div class="lg:self-center w-full">
 			<h1 class="text-3xl lg:text-7xl font-black">Welcome to Pete's free website template!</h1>
 			<p class="py-6">
@@ -40,9 +40,7 @@
 				> forever.
 			</p>
 			<a href="/get" class="btn btn-primary">Get Template</a>
-			<!-- social icons -->
 			<div class="flex gap-4 mt-8">
-				<!-- twitter -->
 				<a href="https://twitter.com/doyouevenblog/" target="_blank" rel="noreferrer noopener">
 					<svg
 						viewBox="0 0 24 24"
@@ -53,7 +51,6 @@
 						></path></svg
 					>
 				</a>
-				<!-- instagram -->
 				<a href="https://www.instagram.com/bloggerpete" target="_blank" rel="noreferrer noopener">
 					<svg
 						viewBox="0 0 24 24"
@@ -66,7 +63,6 @@
 						></path></svg
 					>
 				</a>
-				<!-- github -->
 				<a href="https://github.com/petemcpherson" target="_blank" rel="noreferrer noopener">
 					<svg
 						viewBox="0 0 24 24"
@@ -79,7 +75,6 @@
 						></path></svg
 					>
 				</a>
-				<!-- linkedIn -->
 				<a
 					href="https://www.linkedin.com/in/petemcpherson/"
 					target="_blank"
@@ -98,12 +93,11 @@
 		</div>
 		<div>
 			<img src={pete_is_cool} alt="pete" class="w-full rounded-lg shadow-2xl" />
-			<!-- asdf remove image above -->
 		</div>
-	</div>
+	</div> -->
 
 	<!-- featured on images -->
-	<div class="bg-gray-200 p-10">
+	<!-- <div class="bg-gray-200 p-10">
 		<div class=" flex lg:mx-16 gap-5 flex-wrap justify-between items-center">
 			{#each featuredOnImages as image}
 				<img
@@ -113,10 +107,10 @@
 				/>
 			{/each}
 		</div>
-	</div>
+	</div> -->
 
 	<!-- copy bullets -->
-	<div class="bg-gradient-to-br from-neutral to-neutral-700 py-8 lg:py-24 text-neutral-content">
+	<!-- <div class="bg-gradient-to-br from-neutral to-neutral-700 py-8 lg:py-24 text-neutral-content">
 		<div class="md:w-1/2 mx-2 md:mx-auto leading-loose">
 			<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">
 				HYPER-IMPORTANT <span class="text-warning">WARNING</span>.
@@ -170,10 +164,81 @@
 				wanted to dabble in code! You'll learn a TON in the free course.
 			</p>
 		</div>
-	</div>
+	</div> -->
 
-	<!-- various cards -->
+	<!-- copy bullets -->
+	<!-- <div class="bg-gradient-to-br from-neutral to-neutral-700 py-8 lg:py-24 text-neutral-content">
+		<div class="md:w-1/2 mx-2 md:mx-auto leading-loose">
+			<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">Oh look, a headline.</h2>
+			<p class="mb-3">
+				Ok, fine. I'll use this space for something useful. Let's utlize this space to tell you what
+				this <span class="text-secondary">FREE</span> template includes:
+			</p>
+			<ol>
+				<li>✅️ This entire website as a template</li>
+				<li>✅️ SEO-friendly</li>
+				<li>✅️ Google Analytics support</li>
+				<li>✅️ Google Fonts support</li>
+				<li>✅️ Lots of color themes</li>
+				<li>✅️ 100% Customizable</li>
+				<li>✅️ Mini-course with detailed setup + customization guide</li>
+				<li>✅️ Free hosting (Cloudflare Pages, Vercel, or Netlify)</li>
+				<li>✅️ 100% free</li>
+			</ol>
+		</div>
+	</div> -->
+
+	<!-- bio section -->
+
 	<div class="py-8 lg:py-24">
+		<div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-8 lg:py-8">
+			<div>
+				<img src={pete_drinks_espresso} alt="pete" class="w-full rounded-lg shadow-2xl" />
+				<!-- asdf remove image above -->
+			</div>
+			<div class="lg:self-center w-full">
+				<h1 class="text-3xl lg:text-7xl font-black mb-3">
+					Hi, I'm a lazy indie hacker & entrepreneur 👋️
+				</h1>
+				<p class="mb-3">
+					My name is Pete, this is my 1-pager (for now) for my YouTube channel, <a
+						href="https://www.youtube.com/@codeswithai"
+						class="text-primary"
+						target="_blank"
+						rel="noreferrer noopener">codes with ai</a
+					>.
+				</p>
+				<p class="mb-3">
+					Riiiiight below, you can opt-in to my weekly(ish) roundup newsletter, where I share cool
+					stuff I find on the internet, specifically for creators & entrepreneurs.
+				</p>
+				<p class="mb-3">It really is like that btw. No salesy mcspanspan stuff.</p>
+				<!-- subscribe form -->
+				<form
+					action="https://doyouevenblog.com/sendy/subscribe"
+					method="POST"
+					accept-charset="utf-8"
+				>
+					<label class="input input-bordered flex items-center gap-2" for="email"
+						>Email<br />
+
+						<input class="grow" type="email" name="email" id="email" />
+					</label>
+
+					<br />
+					<div style="display:none;">
+						<label for="hp">HP</label><br />
+						<input type="text" name="hp" id="hp" />
+					</div>
+					<input type="hidden" name="list" value="XDhLHcV28U9xA2nC60QWew" />
+					<input type="hidden" name="subform" value="yes" />
+					<input class="btn btn-primary" type="submit" name="submit" id="submit" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- project cards -->
+	<!-- <div class="py-8 lg:py-24">
 		<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">Show off some projects here?</h2>
 		<div class="w-5/6 mx-auto flex flex-wrap gap-4">
 			<div class="card w-96 bg-base-100 shadow-xl flex-auto">
@@ -222,46 +287,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- copy bullets -->
-	<div class="bg-gradient-to-br from-neutral to-neutral-700 py-8 lg:py-24 text-neutral-content">
-		<div class="md:w-1/2 mx-2 md:mx-auto leading-loose">
-			<h2 class="my-10 text-center font-black text-3xl lg:text-7xl">Oh look, a headline.</h2>
-			<p class="mb-3">
-				Ok, fine. I'll use this space for something useful. Let's utlize this space to tell you what
-				this <span class="text-secondary">FREE</span> template includes:
-			</p>
-			<ol>
-				<li>✅️ This entire website as a template</li>
-				<li>✅️ SEO-friendly</li>
-				<li>✅️ Google Analytics support</li>
-				<li>✅️ Google Fonts support</li>
-				<li>✅️ Lots of color themes</li>
-				<li>✅️ 100% Customizable</li>
-				<li>✅️ Mini-course with detailed setup + customization guide</li>
-				<li>✅️ Free hosting (Cloudflare Pages, Vercel, or Netlify)</li>
-				<li>✅️ 100% free</li>
-			</ol>
-		</div>
-	</div>
-
-	<!-- bio section -->
-
-	<div class="py-8 lg:py-24">
-		<div class="m-5 lg:m-7 items-start space-y-4 lg:w-5/6 lg:mx-auto lg:flex lg:gap-8 lg:py-8">
-			<div>
-				<img src={pete_drinks_espresso} alt="pete" class="w-full rounded-lg shadow-2xl" />
-				<!-- asdf remove image above -->
-			</div>
-			<div class="lg:self-center w-full">
-				<h1 class="text-3xl lg:text-7xl font-black mb-3">Hi, I'm a bio section 👋️</h1>
-				<p class="mb-3">
-					My name is Pete, and hot damn I'm awesome. You should hire me. Pay me money for things.
-				</p>
-				<p class="mb-3">Follow me on OnlyDads. Subscribe to my newsletter, twice.</p>
-				<a href="/" class="btn btn-primary">Learn more</a>
-			</div>
-		</div>
-	</div>
+	</div> -->
 </div>
