@@ -193,31 +193,34 @@
 			{/if}
 
 			<!-- Results -->
-			<div class="space-y-2">
-				<div class="w-full bg-base-300 rounded-full h-4 overflow-hidden">
-					<div
-						class="h-full bg-success"
-						style="width: {cursorPercentage}%; transition: width 0.3s ease;"
-					/>
-				</div>
-				<div class="flex justify-between text-sm">
-					<span>Cursor: {cursorPercentage.toFixed(1)}% ({pollData?.cursor || 0} votes)</span>
-					<span>Total Votes: {totalVotes}</span>
-				</div>
+			{#if hasVoted}
+				<div class="space-y-2">
+					<div class="w-full bg-base-300 rounded-full h-4 overflow-hidden">
+						<div
+							class="h-full bg-success"
+							style="width: {cursorPercentage}%; transition: width 0.3s ease;"
+						/>
+					</div>
+					<div class="flex justify-between text-sm">
+						<span>Cursor: {cursorPercentage.toFixed(1)}% ({pollData?.cursor || 0} votes)</span>
+						<span>Total Votes: {totalVotes}</span>
+					</div>
 
-				<div class="w-full bg-base-300 rounded-full h-4 overflow-hidden">
-					<div
-						class="h-full bg-error"
-						style="width: {windsurfPercentage}%; transition: width 0.3s ease;"
-					/>
+					<div class="w-full bg-base-300 rounded-full h-4 overflow-hidden">
+						<div
+							class="h-full bg-error"
+							style="width: {windsurfPercentage}%; transition: width 0.3s ease;"
+						/>
+					</div>
+					<div class="flex justify-between text-sm">
+						<span>Windsurf: {windsurfPercentage.toFixed(1)}% ({pollData?.windsurf || 0} votes)</span
+						>
+						{#if hasVoted}
+							<span class="text-base-content/70">Thanks for voting!</span>
+						{/if}
+					</div>
 				</div>
-				<div class="flex justify-between text-sm">
-					<span>Windsurf: {windsurfPercentage.toFixed(1)}% ({pollData?.windsurf || 0} votes)</span>
-					{#if hasVoted}
-						<span class="text-base-content/70">Thanks for voting!</span>
-					{/if}
-				</div>
-			</div>
+			{/if}
 		</div>
 	</div>
 
