@@ -1,6 +1,41 @@
 <script>
-	/** @type {{ data: import('./$types').PageData }} */
-	// let { data } = $props();
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { db } from '$lib/firebase';
+	import { doc, onSnapshot } from 'firebase/firestore';
+	import { enhance } from '$app/forms';
+
+	/** @type {import('./$types').PageData} */
+	export let data;
+
+	let pollData = data.pollData;
+	let hasVoted = false;
+
+	// Subscribe to real-time updates
+	onMount(() => {
+		if (browser) {
+			// Check if user has already voted
+			hasVoted = localStorage.getItem('voted-windsurf-vs-cursor') === 'true';
+
+			// Set up real-time listener
+			const unsubscribe = onSnapshot(doc(db, 'polls', 'windsurf-vs-cursor'), (doc) => {
+				if (doc.exists()) {
+					pollData = doc.data();
+				}
+			});
+
+			return () => unsubscribe();
+		}
+	});
+
+	function handleVoteSuccess() {
+		hasVoted = true;
+		localStorage.setItem('voted-windsurf-vs-cursor', 'true');
+	}
+
+	$: totalVotes = pollData?.totalVotes || 0;
+	$: cursorPercentage = totalVotes ? (pollData?.cursor / totalVotes) * 100 : 0;
+	$: windsurfPercentage = totalVotes ? (pollData?.windsurf / totalVotes) * 100 : 0;
 
 	// ideas
 	// add a poll to the top!
@@ -112,4 +147,114 @@
 	];
 </script>
 
-<div></div>
+<div class="max-w-7xl mx-auto px-4 py-8">
+	<h1 class="text-4xl font-bold mb-8">Windsurf vs Cursor: A Detailed Comparison</h1>
+
+	<!-- Poll Section -->
+	<div class="mb-12 p-6 bg-base-200 rounded-lg">
+		<h2 class="text-2xl font-semibold mb-4">Which editor do you prefer?</h2>
+
+		<div class="space-y-4">
+			<!-- Voting Buttons -->
+			{#if !hasVoted}
+				<div class="flex gap-4">
+					<form
+						method="POST"
+						action="?/vote"
+						class="flex-1"
+						use:enhance={() => {
+							return async ({ result }) => {
+								if (result.type === 'success') {
+									handleVoteSuccess();
+								}
+							};
+						}}
+					>
+						<input type="hidden" name="choice" value="cursor" />
+						<button class="btn btn-success w-full" type="submit"> Cursor </button>
+					</form>
+
+					<form
+						method="POST"
+						action="?/vote"
+						class="flex-1"
+						use:enhance={() => {
+							return async ({ result }) => {
+								if (result.type === 'success') {
+									handleVoteSuccess();
+								}
+							};
+						}}
+					>
+						<input type="hidden" name="choice" value="windsurf" />
+						<button class="btn btn-error w-full" type="submit"> Windsurf </button>
+					</form>
+				</div>
+			{/if}
+
+			<!-- Results -->
+			<div class="space-y-2">
+				<div class="w-full bg-base-300 rounded-full h-4 overflow-hidden">
+					<div
+						class="h-full bg-success"
+						style="width: {cursorPercentage}%; transition: width 0.3s ease;"
+					/>
+				</div>
+				<div class="flex justify-between text-sm">
+					<span>Cursor: {cursorPercentage.toFixed(1)}% ({pollData?.cursor || 0} votes)</span>
+					<span>Total Votes: {totalVotes}</span>
+				</div>
+
+				<div class="w-full bg-base-300 rounded-full h-4 overflow-hidden">
+					<div
+						class="h-full bg-error"
+						style="width: {windsurfPercentage}%; transition: width 0.3s ease;"
+					/>
+				</div>
+				<div class="flex justify-between text-sm">
+					<span>Windsurf: {windsurfPercentage.toFixed(1)}% ({pollData?.windsurf || 0} votes)</span>
+					{#if hasVoted}
+						<span class="text-base-content/70">Thanks for voting!</span>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Rest of your comparison content -->
+	<div class="space-y-6">
+		{#each aspects as { aspect, description, cursor, windsurf, winner }}
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 rounded-lg bg-base-100 shadow-sm">
+				<!-- Column 1: Aspect & Description -->
+				<div class="space-y-2">
+					<h3 class="font-semibold text-lg">{aspect}</h3>
+					<p class="text-sm text-base-content/70">{description}</p>
+				</div>
+
+				<!-- Column 2: Cursor -->
+				<div class="bg-base-200 p-3 rounded">
+					<h4 class="font-medium mb-2 text-success">Cursor</h4>
+					<p class="text-sm">{cursor}</p>
+				</div>
+
+				<!-- Column 3: Windsurf -->
+				<div class="bg-base-200 p-3 rounded">
+					<h4 class="font-medium mb-2 text-error">Windsurf</h4>
+					<p class="text-sm">{windsurf}</p>
+				</div>
+
+				<!-- Column 4: Winner with inline ternary -->
+				<div
+					class="flex items-center justify-center p-3 rounded
+					{winner.includes('Tie')
+						? 'bg-warning/20 text-warning-600'
+						: winner.includes('Windsurf')
+							? 'bg-error/20 text-error-600'
+							: 'bg-success/20 text-success-600'}"
+				>
+					<span class="font-medium">{winner}</span>
+				</div>
+			</div>
+		{/each}
+	</div>
+</div>
