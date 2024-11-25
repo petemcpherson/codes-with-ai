@@ -25,6 +25,25 @@
 			alt: 'Google'
 		}
 	];
+
+	const videos = [
+		{
+			title: 'I built an AI girlfriend in 20 mins with Windsurf',
+			embed: 'https://www.youtube.com/embed/emHfS63wYzo?si=la1trWE9kgTBVpHn'
+		},
+		{
+			title: 'Windsurf Editor TUTORIAL // Better than Cursor? (yes)',
+			embed: 'https://www.youtube.com/embed/CLRupjhEFm8?si=2IRqoC_m6igiP29f'
+		},
+		{
+			title: 'Cursor AI COMPOSER - Tips & Tricks',
+			embed: 'https://www.youtube.com/embed/Y0DdrcdDquQ?si=MkVFjqYSpEQDndHz'
+		},
+		{
+			title: 'I built an AI chatbot in 20 mins (steal my code)',
+			embed: 'https://www.youtube.com/embed/9-QokO5hK5Y?si=-wVBgSH110ZwN6wC'
+		}
+	];
 </script>
 
 <Head title="homepage" />
@@ -234,6 +253,32 @@
 					<input type="hidden" name="subform" value="yes" />
 					<input class="btn btn-primary" type="submit" name="submit" id="submit" />
 				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- YouTube Videos Section -->
+	<div class="bg-base-200 py-16">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl font-bold text-center mb-12">Latest Videos</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				{#each videos as video}
+					<div class="bg-base-100 rounded-lg shadow-lg overflow-hidden">
+						<div class="w-full">
+							<iframe
+								src={video.embed}
+								title={video.title}
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+								class="h-full w-full aspect-video"
+							></iframe>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">{video.title}</h3>
+						</div>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>
