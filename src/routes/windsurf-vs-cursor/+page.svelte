@@ -148,12 +148,29 @@
 </script>
 
 <div class="max-w-7xl mx-auto px-4 py-8">
-	<h1 class="text-4xl font-bold mb-8">Windsurf vs Cursor: A Detailed Comparison</h1>
+	<!-- intro -->
+	<div class="w-full md:w-1/2 md:mx-auto space-y-8">
+		<h1 class="text-2xl md:text-6xl text-center font-bold mb-8">
+			Windsurf vs Cursor: A Detailed Comparison
+		</h1>
 
+		<p>Code editors are like a&&holes: everyone has one, and they all do the same thing.</p>
+
+		<p>But as we all know--some are more efficient than others.</p>
+		<p><i>super awkward...</i></p>
+
+		<p>
+			Anywho, Cursor & Windsurf are the two AI code editors making <i>waves</i> right now (get it??).
+			And since I've used both extensively to pump out mediocre code, I'd say that makes me an expert.
+		</p>
+		<p>Here's my detailed breakdown 😉</p>
+	</div>
 	<!-- Poll Section -->
-	<div class="mb-12 p-6 bg-base-200 rounded-lg">
-		<h2 class="text-2xl font-semibold mb-4">Which editor do you prefer?</h2>
-
+	<div class="mb-12 p-6 bg-primary text-primary-content rounded-lg my-2 md:my-8">
+		<div class="text-center mb-4 space-y-2 p-2 md:p-4">
+			<h2 class="text-2xl font-semibold">POLL: Which editor do you prefer?</h2>
+			<p>Vote to see results!</p>
+		</div>
 		<div class="space-y-4">
 			<!-- Voting Buttons -->
 			{#if !hasVoted}
