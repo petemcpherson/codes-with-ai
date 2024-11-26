@@ -62,7 +62,7 @@
 			description: "The design, layout, and user experience of the editor's interface.",
 			cursor:
 				"Fine once you get used to it. Chat & Composer are SEPARATE, and I don't like the design of composer (no border for the pane).",
-			windsurf: '',
+			windsurf: 'Simple! Less things to think about/worry about.',
 			winner: 'Windsurf'
 		},
 		{
@@ -71,8 +71,8 @@
 				"How well the editor's AI understands the structure and context of your entire codebase.",
 			cursor: 'Works well I think--but one NEEDS to specific files/folders a lot of times.',
 			windsurf:
-				'Tends to "automatically" search for files/folders it needs. I ***think*** it tends to have better "deep context".',
-			winner: 'Windsurf'
+				'Less consistent, but tends to "automatically" search for files/folders it needs. I ***think*** it tends to have better "deep context".',
+			winner: 'Tie'
 		},
 		{
 			aspect: 'Overall Code Quality',
