@@ -4,12 +4,14 @@
 	import { db } from '$lib/firebase';
 	import { doc, onSnapshot } from 'firebase/firestore';
 	import { enhance } from '$app/forms';
+	import Head from '$lib/components/Head.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 
 	let pollData = data.pollData;
 	let hasVoted = false;
+	const title = 'Windsurf or Cursor? A Detailed Breakdown of AI Code Editors That Actually Work';
 
 	// Subscribe to real-time updates
 	onMount(() => {
@@ -147,29 +149,17 @@
 	];
 </script>
 
+<Head {title} />
+
 <div class="max-w-7xl mx-auto px-4 py-8">
-	<!-- intro -->
 	<div class="w-full md:w-1/2 md:mx-auto space-y-8">
-		<h1 class="text-2xl md:text-6xl text-center font-bold mb-8">
-			Windsurf vs Cursor: A Detailed Comparison
-		</h1>
-
-		<p>Code editors are like a&&holes: everyone has one, and they all do the same thing.</p>
-
-		<p>But as we all know--some are more efficient than others.</p>
-		<p><i>super awkward...</i></p>
-
-		<p>
-			Anywho, Cursor & Windsurf are the two AI code editors making <i>waves</i> right now (get it??).
-			And since I've used both extensively to pump out mediocre code, I'd say that makes me an expert.
-		</p>
-		<p>Here's my detailed breakdown 😉</p>
+		<h1 class="text-2xl md:text-6xl text-center font-bold mb-8">{title}</h1>
 	</div>
 	<!-- Poll Section -->
 	<div class="mb-12 p-6 bg-primary text-primary-content rounded-lg my-2 md:my-8">
 		<div class="text-center mb-4 space-y-2 p-2 md:p-4">
-			<h2 class="text-2xl font-semibold">POLL: Which editor do you prefer?</h2>
-			<p>Vote to see results!</p>
+			<h2 class="text-2xl md:text-4xl font-semibold">POLL: Which editor do you prefer?</h2>
+			<p class="text-lg">Vote to see results!</p>
 		</div>
 		<div class="space-y-4">
 			<!-- Voting Buttons -->
@@ -240,14 +230,40 @@
 			{/if}
 		</div>
 	</div>
+	<!-- intro -->
+	<div class="w-full md:w-1/2 md:mx-auto space-y-8">
+		<p class="text-lg">
+			Code editors are like a&&holes: everyone has one, and they all do the same thing.
+		</p>
 
-	<!-- Rest of your comparison content -->
+		<p class="text-lg">But as we all know--some are more efficient than others.</p>
+		<p class="text-lg"><i>super awkward...</i></p>
+
+		<p class="text-lg">
+			Anywho, Cursor & Windsurf are the two AI code editors making <i>waves</i> right now (get it??).
+			And since I've used both extensively to pump out mediocre code, I'd say that makes me an expert.
+		</p>
+		<iframe
+			src="https://www.youtube.com/embed/GU-QDyZDX2o?si=eNkAtO_wIuvKjVQ_"
+			title="YouTube video"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+			class="h-full w-full aspect-video"
+		></iframe>
+	</div>
+
+	<!-- Comparison content -->
+	<div class="w-full md:w-1/2 md:mx-auto space-y-8 my-4 md:my-12">
+		<h2 class="text-2xl md:text-4xl font-semibold">Detailed Comparison: Windsurf vs Cursor:</h2>
+		<p class="text-lg">Let's examine each aspect, one by one.</p>
+	</div>
 	<div class="space-y-6">
 		{#each aspects as { aspect, description, cursor, windsurf, winner }}
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 rounded-lg bg-base-100 shadow-sm">
 				<!-- Column 1: Aspect & Description -->
 				<div class="space-y-2">
-					<h3 class="font-semibold text-lg">{aspect}</h3>
+					<h3 class="text-xl md:text-3xl font-semibold">{aspect}</h3>
 					<p class="text-sm text-base-content/70">{description}</p>
 				</div>
 
@@ -276,5 +292,57 @@
 				</div>
 			</div>
 		{/each}
+	</div>
+
+	<!-- blog post content 2 -->
+	<div class="w-full md:w-1/2 md:mx-auto space-y-8">
+		<h2 class="text-2xl md:text-4xl font-semibold">
+			Which Editor Is Right for You? (Because Context Matters!)
+		</h2>
+		<p class="text-lg">It’s like asking, “Should I get a dog or a cat?”</p>
+		<p class="text-lg">The answer is always "dog."</p>
+		<p class="text-lg">
+			Just kidding. The real question is, <b class="text-primary"
+				>what do you need to accomplish your goals??</b
+			>
+		</p>
+
+		<h3 class="text-xl md:text-3xl">Are You a New Developer or Non-Developer?</h3>
+		<p class="text-lg">If you’re newer to coding—or not a coder at all—Windsurf is your friend.</p>
+		<p class="text-lg">
+			Its intuitive setup and simpler design make it less intimidating, and the AI agent feels more
+			approachable for beginners (and arguably more complete!).
+		</p>
+		<p class="text-lg">
+			Plus, Windsurf is new--it's only a matter of time before it releases some of those "missing"
+			features (like image analysis and more @ functionality).
+		</p>
+
+		<h3 class="text-xl md:text-3xl">Are You a Hardcore Dev Who Lives in the Matrix?</h3>
+		<p class="text-lg">
+			For the seasoned coders who could TECHNICALLY code all their stuff manually...
+		</p>
+		<p class="text-lg">(<i>or copy/paste from Stack Overflow let's be real</i>)</p>
+		<p class="text-lg">
+			Cursor’s autocomplete / "code completion" is unmatched. It’s more of a “power user’s tool”
+			that rewards those willing to put in the time to learn its quirks (and quickly forgo the
+			occasional bugs).
+		</p>
+		<p class="text-lg">
+			But don’t write off Windsurf entirely—it still packs a punch for veteran devs, especially if
+			you’re looking for something that can adapt to your workflow without requiring a three-hour
+			crash course. Plus, its accuracy on larger-scale changes is impressive.
+		</p>
+		<p>And again, all of these tools will eventually be exactly the same. #truth.</p>
+
+		<h2 class="text-2xl md:text-4xl">Final Verdict: Pick Your Poison</h2>
+		<p class="text-lg">
+			If you’re all about speed and precision (and can tolerate a few quirks), Cursor might be your
+			soulmate. But if you want a tool that feels more thoughtful, intuitive, and beginner-friendly,
+			Windsurf has your back. Honestly, either one beats manually hunting through Stack Overflow for
+			the same bug you Googled last week.
+		</p>
+		<p class="text-lg font-bold text-primary">The real winner here? OpenAI & Anthropic.</p>
+		<p class="text-lg">Because no matter which editor you choose, you're funding them. 😉</p>
 	</div>
 </div>
