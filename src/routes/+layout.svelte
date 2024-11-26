@@ -26,6 +26,7 @@
 				<!-- <li><a href="/about">About</a></li>
 				<li><a href="/salesy-mcsales-landing-page">LNDNG PGE</a></li> -->
 				<li><a href="/projects">Projects</a></li>
+				<li><a href="/windsurf-vs-cursor">Windsurf vs Cursor</a></li>
 			</ul>
 		</div>
 		<!-- logo or site title -->
@@ -38,6 +39,7 @@
 			<!-- <li><a href="/about">About</a></li>
 			<li><a href="/salesy-mcsales-landing-page">LNDNG PGE</a></li> -->
 			<li><a href="/projects">Projects</a></li>
+			<li><a href="/windsurf-vs-cursor">Windsurf vs Cursor</a></li>
 		</ul>
 	</div>
 
